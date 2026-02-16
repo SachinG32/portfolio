@@ -4,5 +4,6 @@ import react from '@vitejs/plugin-react'
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/', // Change to '/repository-name/' for GitHub Pages if not using custom domain
+  // Use '/' for Vercel, '/portfolio/' for GitHub Pages
+  base: process.env.VITE_BASE_PATH || '/',
 })
